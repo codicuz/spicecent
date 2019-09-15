@@ -39,7 +39,7 @@ while :; do
 	  docker rm -f $(docker ps -a -q)
 	 ;;
 	-run)
-	  docker run -itd \
+	  docker run -itd -u 1000 \
 	  --hostname $HOSTNAME \
 	  -p 5908:5900 \
 	  --name $DCNAME \
