@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DINAME="centos-spice:latest"
+DINAME="centos-spice:i3-user"
 DCNAME="cspice"
 HOSTNAME="c-spice.myhost.lan"
 
