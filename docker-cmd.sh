@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DINAME="centos-spice:xfce4"
+DINAME="centos-spice:xfce4-user"
 DCNAME="cspice"
 HOSTNAME="c-spice.myhost.lan"
 
