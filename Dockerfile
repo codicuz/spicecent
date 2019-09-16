@@ -1,4 +1,4 @@
-FROM centos:latest as base
+FROM centos:latest
 
 LABEL maintainer="Codicus" description="Centos Spice"
 
