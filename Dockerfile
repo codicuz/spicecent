@@ -14,4 +14,8 @@ COPY ["rootfs", "/"]
 HEALTHCHECK --interval=60s --timeout=15s \
  CMD ss -lntp | grep -q ':5900'
 
+RUN useradd user
+
+USER user
+
 CMD ["xinit", "/usr/bin/cinnamon-session", "--", "/usr/bin/X", "-config", "/etc/X11/spice-xorg.conf", ":0"]
