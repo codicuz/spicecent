@@ -1,12 +1,8 @@
-FROM centos:latest
+FROM codicus/spicecent:base
 
-LABEL maintainer="Codicus" description="Centos Spice"
+LABEL maintainer="Codicus" description="Centos Spice Xfce4"
 
-RUN yum -y install epel-release; \
-  yum -y update; \
-  yum -y install mc nmon iproute telnet vim xorg-x11-server-Xorg xorg-x11-xinit xorg-x11-drv-evdev xorg-x11-drv-mouse xorg-x11-drv-libinput xorg-x11-server-Xspice; \
-  yum -y groups install Xfce; \
-  yum -y erase *power* *screensaver*; \
+RUN  yum -y group install "Xfce"; \
   rm -rfv /etc/xdg/autostart/xfce-polkit*; \
   /bin/dbus-uuidgen > /etc/machine-id; \
   yum clean all
